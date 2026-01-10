@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products WholesalePro | Official Premium Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    container: { center: true, padding: '1.5rem' },
+                    colors: { 'primary': '#EAB308', 'dark-bg': '#0D0D0D' },
+                    fontFamily: { 'display': ['"Plus Jakarta Sans"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+        --brand-gold: #EAB308;
+        --dark-bg: #0D0D0D;
+        --card-bg: #141414;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            font-family: 'Inter', sans-serif;
+            color: white;
+        }
+
+        /* =======================
+        Nav menu
+        ======================= */
+        /* Glassmorphism Effect */
+        .glass-nav {
+            background: rgba(13, 13, 13, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Active Page Indicator */
+        .text-primary.border-b-2 {
+            border-bottom-color: #EAB308;
+        }
+
+        /* WhatsApp Specific Color */
+        .bg-whatsapp {
+            background-color: #25d366;
+        }
+
+        body { background-color: #0D0D0D; color: white; -webkit-font-smoothing: antialiased; }
+        .aboutHero { @apply pt-48 pb-32 container text-left; }
+        .stat-grid { @apply container py-24 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-12 text-center; 
+        }
+
+        /* Brands Dropdown Container */
+        .dropdown-menu {
+        background: rgba(13, 13, 13, 0.98); 
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        
+        /* HIDDEN BY DEFAULT */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        padding: 1rem 0;
+        border-radius: 0.75rem;
+        
+        /* The "Hidden" Logic */
+        opacity: 0;
+        invisible: hidden; /* Prevents clicking links when hidden */
+        transform: translateY(10px); /* Slight slide-down effect */
+        transition: all 0.3s ease-in-out;
+        z-index: 50;
+        }
+
+        /* SHOW ONLY ON HOVER */
+        .group:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+
+        /* Active colors as requested */
+        .parent-active {
+            color: #EAB308 !important;
+        }
+
+        .dropdown-active {
+            color: #EAB308 !important;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* =======================
+        hero section
+        ======================= */
+        @keyframes floatUpDown {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-18px); }
+            100% { transform: translateY(0); }
+        }
+
+        .floating-image {
+            animation: floatUpDown 6s ease-in-out infinite;
+        }
+
+
+        /* =======================
+        whatsapp button
+        ======================= */
+        @keyframes primaryGlowPulse {
+        0% {
+            box-shadow: 0 0 6px rgba(234, 179, 8, 0.3);
+        }
+        50% {
+            box-shadow: 0 0 22px rgba(234, 179, 8, 0.7);
+        }
+        100% {
+            box-shadow: 0 0 6px rgba(234, 179, 8, 0.3);
+        }
+        }
+
+        /* =======================
+        Footer
+        ======================= */
+        .footerSection {
+            background-color: #0D0D0D;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 5rem 0;
+            }
+
+        .footer-heading {
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-link {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+        }
+        .footer-link:hover {
+            color: #EAB308;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        .footer-contact-icon {
+            color: #EAB308;
+            margin-top: 0.25rem;
+        }
+
+        .footer-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <header class="fixed top-0 w-full z-50 glass-nav">
+    <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+        <div class="text-xl md:text-2xl font-display font-extrabold italic uppercase tracking-tighter">
+            WHOLESALE <span class="text-primary">PRO</span>
+        </div>
+
+       <nav class="hidden lg:flex items-center gap-8
+            text-[11px] uppercase tracking-[0.2em]
+            font-bold text-gray-400">
+
+            <!-- Home -->
+            <a href="/index.html"
+                class="hover:text-primary transition-colors">
+                Home
+            </a>
+
+            <!-- About -->
+            <a href="/Pages/about.html"
+                class="hover:text-primary transition-colors">
+                About
+            </a>
+
+            <!-- Products -->
+            <a href="/Pages/products.html"
+                class="hover:text-primary transition-colors">
+                Products
+            </a>
+
+            <!-- Services -->
+            <a href="/Pages/services.html"
+                class="hover:text-primary transition-colors">
+                Services
+            </a>
+
+            <!-- Blog -->
+            <a href="/Pages/blog.html"
+                class="hover:text-primary transition-colors">
+                Blog
+            </a>
+
+            <!-- Brands Dropdown -->
+            <div class="relative group cursor-pointer">
+
+                <span class="flex items-center gap-2
+                            group-hover:text-primary transition-colors">
+                Brands
+                <i class="fa-solid fa-chevron-down text-[8px]"></i>
+                </span>
+
+                <!-- Dropdown -->
+                <div class="absolute top-full left-0 mt-4 w-48
+                            bg-[#141414]
+                            border border-white/10
+                            rounded-xl shadow-2xl
+                            opacity-0 invisible
+                            group-hover:opacity-100 group-hover:visible
+                            transition-all duration-300">
+
+                <a href="/Pages/cream delux.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Cream Deluxe
+                </a>
+
+                <a href="/Pages/exotic whip.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Exotic Whip
+                </a>
+
+                <a href="/Pages/fast gas.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Fast Gas
+                </a>
+
+                <a href="/Pages/smart whip.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Smart Whip
+                </a>
+
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <a href="#" class="bg-whatsapp hover:bg-[#22c35e] text-white px-6 py-3 rounded-xl font-display font-extrabold uppercase text-[10px] tracking-widest flex items-center gap-2 transition-all shadow-lg shadow-green-500/10">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                WhatsApp
+            </a>
+            <button class="lg:hidden text-white text-2xl">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+     <!--=======================
+        hero section
+     ======================= -->
+    <section class="bg-black min-h-screen flex items-center">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Left Content -->
+            <div>
+            <span class="inline-block mb-4 px-4 py-1 rounded-full text-xs tracking-widest
+                        bg-primary/10 text-primary uppercase">
+                Official Partner Since 2021
+            </span>
+
+            <h1 id="productTitle"
+                class="text-4xl md:text-6xl font-display font-extrabold uppercase leading-tight mb-6">
+                <!-- JS inject -->
+            </h1>
+
+            <p id="productDesc"
+                class="text-gray-400 max-w-xl mb-8">
+                <!-- JS inject -->
+            </p>
+
+            <a href="#contact"
+            class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-black
+                    font-semibold rounded-lg
+                    transition-transform duration-300
+                    hover:scale-105">
+
+            <!-- Comment Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor"
+                class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M8 10h8m-8 4h5m-9 6l3-3h11a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12z" />
+            </svg>
+
+            Get Best Deals
+            </a>
+
+            <ul class="mt-8 space-y-3 text-sm">
+            <li class="flex items-center gap-3 text-gray-300">
+                <span class="text-primary">✔</span>
+                Official Partner Since 2021
+            </li>
+
+            <li class="flex items-center gap-3 text-gray-300">
+                <span class="text-primary">✔</span>
+                Best Wholesale Prices
+            </li>
+
+            <li class="flex items-center gap-3 text-gray-300">
+                <span class="text-primary">✔</span>
+                Stock Available 365 Days
+            </li>
+
+            <li class="flex items-center gap-3 text-gray-300">
+                <span class="text-primary">✔</span>
+                Authentic Products Only
+            </li>
+            </ul>
+
+            </div>
+
+            <!-- Right Image -->
+            <div class="relative flex justify-center">
+            <img id="productImage"
+                src=""
+                alt=""
+                class="w-[90%] max-w-md floating-image">
+            </div>
+
+        </div>
+        </section>
+
+    <!--=======================
+        available products
+     ======================= -->
+    <section class="availableProducts bg-#0D0D0D py-24">
+        <div class="container mx-auto px-6">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-display font-extrabold uppercase tracking-wide">
+                AVAILABLE <span class="text-primary">PRODUCTS</span>
+            </h2>
+            <p class="text-gray-400 text-sm mt-3">
+                We offer 2kg tanks and small 640g cylinders
+            </p>
+            </div>
+
+            <!-- Product Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+            <!-- 640g Cylinder -->
+            <a href="product.html?id=640-cylinder"
+                class="group relative rounded-2xl overflow-hidden border border-white/10
+                        transition-all duration-500 hover:-translate-y-2 hover:border-primary">
+
+                <img src="../Images/imgi_2_cream-deluxe-black-cobra-RfpR8M7c.png"
+                    alt="640g Cylinder"
+                    class="w-full h-[500px] object-cover
+                            transition-transform duration-700 ease-out
+                            group-hover:scale-105">
+
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                <!-- Content -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                <h3 class="text-white font-semibold text-lg mb-1">
+                    640g Cylinder
+                </h3>
+                <p class="text-gray-300 text-sm">
+                    Compact size for efficient distribution
+                </p>
+                </div>
+            </a>
+
+            <!-- 2kg Tank -->
+            <a href="product.html?id=2kg-cylinder"
+                class="group relative rounded-2xl overflow-hidden border border-white/10
+                        transition-all duration-500 hover:-translate-y-2 hover:border-primary">
+
+                <img src="../Images/imgi_3_warehouse-stock-Cy4fZP9g.png"
+                    alt="2kg Tank"
+                    class="w-full h-[500px] object-cover
+                            transition-transform duration-700 ease-out
+                            group-hover:scale-105">
+
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                <!-- Content -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                <h3 class="text-white font-semibold text-lg mb-1">
+                    2kg Tank
+                </h3>
+                <p class="text-gray-300 text-sm">
+                    Large capacity for high volume needs
+                </p>
+                </div>
+            </a>
+
+            </div>
+
+        </div>
+        </section>
+
+    <!--==============================
+    Card info 
+    ============================== -->
+    <section class="bg-#141414 py-24">
+        <div class="container mx-auto px-6
+            max-w-full
+            md:max-w-6xl
+            lg:max-w-[1280px]
+            xl:max-w-[1440px]">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+            <!-- Minimum Order -->
+            <div class="group bg-[#0b0b0b] border border-white/10 rounded-2xl p-10
+                        text-center transition-all duration-500
+                        hover:-translate-y-2 hover:border-primary">
+
+                <div class="flex justify-center mb-6">
+                <div class="w-14 h-14 flex items-center justify-center rounded-full
+                            bg-primary/10 text-primary">
+                    <!-- box icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4a2 2 0 001-1.73z"/>
+                    </svg>
+                </div>
+                </div>
+
+                <h4 class="text-white font-normal mb-2 text-xl">
+                Minimum Order
+                </h4>
+
+                <p class="text-gray-400 text-base">
+                12 pallets for container shipping
+                </p>
+            </div>
+
+            <!-- Local Stock -->
+            <div class="group bg-[#0b0b0b] border border-white/10 rounded-2xl p-10
+                        text-center transition-all duration-500
+                        hover:-translate-y-2 hover:border-primary">
+
+                <div class="flex justify-center mb-6">
+                <div class="w-14 h-14 flex items-center justify-center rounded-full
+                            bg-primary/10 text-primary">
+                    <!-- truck icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 17a2 2 0 11-4 0 2 2 0 014 0zm10 0a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 7h11v8H3zM14 9h4l3 3v3h-7z"/>
+                    </svg>
+                </div>
+                </div>
+
+                <h4 class="text-white font-normal mb-2 text-xl">
+                Local Stock
+                </h4>
+
+                <p class="text-gray-400 text-base">
+                Orders from 5 pallets where available
+                </p>
+            </div>
+
+            <!-- Year-Round -->
+            <div class="group bg-[#0b0b0b] border border-white/10 rounded-2xl p-10
+                        text-center transition-all duration-500
+                        hover:-translate-y-2 hover:border-primary">
+
+                <div class="flex justify-center mb-6">
+                <div class="w-14 h-14 flex items-center justify-center rounded-full
+                            bg-primary/10 text-primary">
+                    <!-- clock icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 3"/>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 21a9 9 0 100-18 9 9 0 000 18z"/>
+                    </svg>
+                </div>
+                </div>
+
+                <h4 class="text-white font-normal mb-2 text-xl">
+                Year-Round
+                </h4>
+
+                <p class="text-gray-400 text-base">
+                Stock available 365 days a year
+                </p>
+            </div>
+
+            </div>
+
+        </div>
+        </section>
+
+    <!--==============================
+    always in stock
+    ============================== -->
+    <section class="alwaysStock bg-#0D0D0D py-24">
+        <div class="container mx-auto px-6
+            max-w-full
+            md:max-w-6xl
+            lg:max-w-[1280px]
+            xl:max-w-[1440px]">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+
+            <!-- Image -->
+            <div class="flex justify-center lg:justify-start">
+                <img src="../Images/imgi_3_warehouse-stock-Cy4fZP9g.png"
+                    alt="Cream Deluxe Stock"
+                    class="rounded-2xl w-full max-w-md h-[40vh] object-cover">
+            </div>
+
+            <!-- Content -->
+            <div>
+                <h2 class="text-3xl md:text-4xl font-display font-extrabold uppercase mb-6">
+                ALWAYS <span class="text-primary">IN STOCK</span>
+                </h2>
+
+                <p class="text-gray-400 max-w-xl mb-8">
+                We maintain full stock availability throughout the year. In some countries,
+                we already have stock available, so orders can start from just 5 pallets.
+                </p>
+
+               <a href="https://wa.me/XXXXXXXXXX"
+                class="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] 
+                    text-white font-semibold rounded-lg text-xl 
+                    transition-transform duration-300 
+                    hover:scale-105 
+                    animate-[primaryGlowPulse_3s_ease-in-out_infinite]">
+
+                <!-- WhatsApp Icon -->
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+
+                Contact on WhatsApp
+                </a>
+
+
+            </div>
+
+            </div>
+
+        </div>
+        </section>
+</main>
+
+<footer class="footerSection">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            
+            <div>
+                <div class="text-2xl font-display font-extrabold italic uppercase mb-6">
+                    WHOLESALE <span class="text-primary">PRO</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-xs">
+                    Your trusted wholesale partner for premium cream chargers. Stock available 365 days a year.
+                </p>
+                <a href="#" class="text-primary font-bold text-sm flex items-center gap-2 hover:underline">
+                    <i class="fa-brands fa-whatsapp"></i> Contact on WhatsApp
+                </a>
+            </div>
+
+            <div class="footer-list">
+                <h5 class="footer-heading">Quick Links</h5>
+                <a href="#" class="footer-link">Home</a>
+                <a href="#" class="footer-link">About Us</a>
+                <a href="#" class="footer-link">Products</a>
+                <a href="#" class="footer-link">Services</a>
+                <a href="#" class="footer-link">Blog</a>
+            </div>
+
+            <div class="footer-list">
+                <h5 class="footer-heading">Our Brands</h5>
+                <a href="#" class="footer-link">Cream Deluxe</a>
+                <a href="#" class="footer-link">Fast Gas</a>
+                <a href="#" class="footer-link">Exotic Whip</a>
+                <a href="#" class="footer-link">Smart Whip</a>
+            </div>
+
+
+            <div>
+                <h5 class="footer-heading">Contact</h5>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+                    Global Wholesale Distribution
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope footer-contact-icon"></i>
+                    info@wholesalepro.com
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
+                    Available 24/7 on WhatsApp
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pt-8 border-t border-white/5 text-center">
+            <p class="text-gray-600 text-xs uppercase tracking-widest">
+                © 2026 WholesalePro. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+  const products = {
+        "640-cylinder": {
+        title: "CREAM DELUXE 640G",
+        desc: "We are a wholesale distributor of Cream Deluxe. Thanks to our large-scale purchasing power, we offer the best prices on the market.",
+        img: "../Images/imgi_1_cream-deluxe-products-kRCY-eG8.png"
+        },
+        "2kg-cylinder": {
+        title: "CREAM DELUXE 2KG",
+        desc: "Heavy-duty professional cylinder designed for high-volume commercial use with consistent performance.",
+        img: "../Images/imgi_2_cream-deluxe-black-cobra-RfpR8M7c.png"
+        }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get("id");
+
+    const product = products[productId];
+
+    if (product) {
+        document.getElementById("productTitle").innerHTML =
+        product.title.replace(" ", "<br>");
+
+        document.getElementById("productDesc").textContent = product.desc;
+
+        const img = document.getElementById("productImage");
+        img.src = product.img;
+        img.alt = product.title;
+    }
+</script>
+
+
+</body>
+</html>

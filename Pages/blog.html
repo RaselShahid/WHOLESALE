@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog WholesalePro | Official Premium Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    container: { center: true, padding: '1.5rem' },
+                    colors: { 'primary': '#EAB308', 'dark-bg': '#0D0D0D' },
+                    fontFamily: { 'display': ['"Plus Jakarta Sans"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+        --brand-gold: #EAB308;
+        --dark-bg: #0D0D0D;
+        --card-bg: #141414;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            font-family: 'Inter', sans-serif;
+            color: white;
+        }
+
+        /* =======================
+        Nav menu
+        ======================= */
+        /* Glassmorphism Effect */
+        .glass-nav {
+            background: rgba(13, 13, 13, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Active Page Indicator */
+        .text-primary.border-b-2 {
+            border-bottom-color: #EAB308;
+        }
+
+        /* WhatsApp Specific Color */
+        .bg-whatsapp {
+            background-color: #25d366;
+        }
+
+        body { background-color: #0D0D0D; color: white; -webkit-font-smoothing: antialiased; }
+        .aboutHero { @apply pt-48 pb-32 container text-left; }
+        .stat-grid { @apply container py-24 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-12 text-center; 
+        }
+
+        /* Brands Dropdown Container */
+        .dropdown-menu {
+        background: rgba(13, 13, 13, 0.98); 
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        
+        /* HIDDEN BY DEFAULT */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        padding: 1rem 0;
+        border-radius: 0.75rem;
+        
+        /* The "Hidden" Logic */
+        opacity: 0;
+        invisible: hidden; /* Prevents clicking links when hidden */
+        transform: translateY(10px); /* Slight slide-down effect */
+        transition: all 0.3s ease-in-out;
+        z-index: 50;
+        }
+
+        /* SHOW ONLY ON HOVER */
+        .group:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+
+        /* Active colors as requested */
+        .parent-active {
+            color: #EAB308 !important;
+        }
+
+        .dropdown-active {
+            color: #EAB308 !important;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        /* =======================
+        Ready to order whatsapp
+        ======================= */
+        
+        @keyframes primaryGlowPulse {
+        0%   { box-shadow: 0 0 6px rgba(234,179,8,.3); }
+        50%  { box-shadow: 0 0 22px rgba(234,179,8,.7); }
+        100% { box-shadow: 0 0 6px rgba(234,179,8,.3); }
+        }
+        
+
+        /* =======================
+        Footer
+        ======================= */
+        .footerSection {
+            background-color: #0D0D0D;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 5rem 0;
+        }
+
+        .footer-heading {
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-link {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+        }
+        .footer-link:hover {
+            color: #EAB308;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        .footer-contact-icon {
+            color: #EAB308;
+            margin-top: 0.25rem;
+        }
+
+        .footer-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <header class="fixed top-0 w-full z-50 glass-nav">
+    <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+        <div class="text-xl md:text-2xl font-display font-extrabold italic uppercase tracking-tighter">
+            WHOLESALE <span class="text-primary">PRO</span>
+        </div>
+
+       <nav class="hidden lg:flex items-center gap-8
+            text-[11px] uppercase tracking-[0.2em]
+            font-bold text-gray-400">
+
+            <!-- Home -->
+            <a href="/index.html"
+                class="hover:text-primary transition-colors">
+                Home
+            </a>
+
+            <!-- About -->
+            <a href="/Pages/about.html"
+                class="hover:text-primary transition-colors">
+                About
+            </a>
+
+            <!-- Products -->
+            <a href="/Pages/products.html"
+                class="hover:text-primary transition-colors">
+                Products
+            </a>
+
+            <!-- Services -->
+            <a href="/Pages/services.html"
+                class="hover:text-primary transition-colors">
+                Services
+            </a>
+
+            <!-- Blog -->
+            <a href="/Pages/blog.html"
+                class="hover:text-primary transition-colors">
+                Blog
+            </a>
+
+            <!-- Brands Dropdown -->
+            <div class="relative group cursor-pointer">
+
+                <span class="flex items-center gap-2
+                            group-hover:text-primary transition-colors">
+                Brands
+                <i class="fa-solid fa-chevron-down text-[8px]"></i>
+                </span>
+
+                <!-- Dropdown -->
+                <div class="absolute top-full left-0 mt-4 w-48
+                            bg-[#141414]
+                            border border-white/10
+                            rounded-xl shadow-2xl
+                            opacity-0 invisible
+                            group-hover:opacity-100 group-hover:visible
+                            transition-all duration-300">
+
+                <a href="/Pages/cream delux.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Cream Deluxe
+                </a>
+
+                <a href="/Pages/exotic whip.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Exotic Whip
+                </a>
+
+                <a href="/Pages/fast gas.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Fast Gas
+                </a>
+
+                <a href="/Pages/smart whip.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Smart Whip
+                </a>
+
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <a href="#" class="bg-whatsapp hover:bg-[#22c35e] text-white px-6 py-3 rounded-xl font-display font-extrabold uppercase text-[10px] tracking-widest flex items-center gap-2 transition-all shadow-lg shadow-green-500/10">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                WhatsApp
+            </a>
+            <button class="lg:hidden text-white text-2xl">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- ===================
+     hero section
+     ======================= -->
+    <section class="blogHero relative bg-black h-[70vh] flex items-center overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+
+            <!-- Badge (Improved visibility) -->
+            <span class="inline-flex items-center mb-6 px-5 py-3 rounded-full
+                        text-xs tracking-widest uppercase font-semibold
+                        border border-primary/40
+                        bg-primary/20 text-primary">
+            Our Blog
+            </span>
+
+            <!-- Heading -->
+            <h1 class="text-4xl md:text-6xl font-display font-bold uppercase mb-6">
+            Industry <span class="text-primary">Insights</span>
+            </h1>
+
+            <!-- Description -->
+            <p class="text-gray-400 max-w-2xl">
+            Stay updated with the latest news, tips, and trends in the wholesale cream charger industry.
+            </p>
+
+        </div>
+
+        <!-- Primary Glow (Bottom Center) -->
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2
+                    w-[700px] h-[300px]
+                    bg-primary/25 blur-[150px]
+                    pointer-events-none">
+        </div>
+    </section>
+
+    <!-- ===================
+    Blog Grid
+    ===================== -->
+    <section class="blogGrid bg-black py-28">
+        <div class="container mx-auto px-6">
+
+            <!-- Section Title -->
+            <div class="text-center mb-20">
+            <h2 class="text-3xl md:text-4xl font-display font-extrabold uppercase">
+                Latest <span class="text-primary">Insights</span>
+            </h2>
+            </div>
+
+            <!-- Blog Cards -->
+            <div id="blogGrid"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- JS will inject cards here -->
+            </div>
+
+        </div>
+    </section>
+
+
+
+<!-- =========================
+    ready to use
+    ============================== -->
+    <section class="ready2Start bg-[#0D0D0D] py-32">
+        <div class="container mx-auto px-6 text-center">
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-display font-extrabold uppercase mb-4">
+            Ready to <span class="text-primary">Start?</span>
+            </h2>
+
+            <!-- Subtext -->
+            <p class="text-gray-400 max-w-xl mx-auto mb-12">
+            Get in touch today and let's discuss your wholesale needs.
+            </p>
+
+            <!-- WhatsApp CTA (CORRECT EFFECT) -->
+            <a href="https://wa.me/XXXXXXXXXX"
+            class="inline-flex items-center gap-3
+                    px-10 py-4
+                    bg-[#25D366] text-white
+                    font-semibold rounded-2xl
+                    text-2xl
+                    transition-transform duration-300
+                    hover:scale-105
+                    animate-[primaryGlowPulse_3s_ease-in-out_infinite]">
+
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            Contact on WhatsApp
+            </a>
+
+        </div>
+        </section>
+</main>
+
+<footer class="footerSection">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            
+            <div>
+                <div class="text-2xl font-display font-extrabold italic uppercase mb-6">
+                    WHOLESALE <span class="text-primary">PRO</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-xs">
+                    Your trusted wholesale partner for premium cream chargers. Stock available 365 days a year.
+                </p>
+                <a href="#" class="text-primary font-bold text-sm flex items-center gap-2 hover:underline">
+                    <i class="fa-brands fa-whatsapp"></i> Contact on WhatsApp
+                </a>
+            </div>
+
+            <div class="footer-list">
+                <h5 class="footer-heading">Quick Links</h5>
+                <a href="#" class="footer-link">Home</a>
+                <a href="#" class="footer-link">About Us</a>
+                <a href="#" class="footer-link">Products</a>
+                <a href="#" class="footer-link">Services</a>
+                <a href="#" class="footer-link">Blog</a>
+            </div>
+
+            <div class="footer-list">
+                <h5 class="footer-heading">Our Brands</h5>
+                <a href="#" class="footer-link">Cream Deluxe</a>
+                <a href="#" class="footer-link">Fast Gas</a>
+                <a href="#" class="footer-link">Exotic Whip</a>
+                <a href="#" class="footer-link">Smart Whip</a>
+            </div>
+
+
+            <div>
+                <h5 class="footer-heading">Contact</h5>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+                    Global Wholesale Distribution
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope footer-contact-icon"></i>
+                    info@wholesalepro.com
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
+                    Available 24/7 on WhatsApp
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pt-8 border-t border-white/5 text-center">
+            <p class="text-gray-600 text-xs uppercase tracking-widest">
+                © 2026 WholesalePro. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+    <script>
+        const blogs = [
+        {
+            id: "wholesale-guide",
+            category: "Guide",
+            date: "January 5, 2025",
+            title: "Complete Guide to Wholesale Cream Chargers",
+            excerpt: "Everything you need to know about starting your wholesale cream charger business.",
+            image: "../images/imgi_1_cream-deluxe-products-kRCY-eG8.png"
+        },
+        {
+            id: "cream-deluxe-vs-exotic",
+            category: "Comparison",
+            date: "January 3, 2025",
+            title: "Cream Deluxe vs Exotic Whip: Which is Better?",
+            excerpt: "A detailed comparison of two premium cream charger brands.",
+            image: "../images/imgi_1_warehouse-stock-Cy4fZP9g.png"
+        },
+        {
+            id: "bulk-ordering-tips",
+            category: "Tips",
+            date: "December 28, 2024",
+            title: "Tips for Bulk Ordering Cream Chargers",
+            excerpt: "Maximize your profits with these smart bulk ordering strategies.",
+            image: "../images/imgi_2_cream-deluxe-black-cobra-RfpR8M7c.png"
+        },
+        {
+            id: "bulk-ordering-tips",
+            category: "Tips",
+            date: "December 28, 2024",
+            title: "Tips for Bulk Ordering Cream Chargers",
+            excerpt: "Maximize your profits with these smart bulk ordering strategies.",
+            image: "../images/imgi_2_cream-deluxe-black-cobra-RfpR8M7c.png"
+        },
+        {
+            id: "wholesale-guide",
+            category: "Guide",
+            date: "January 5, 2025",
+            title: "Complete Guide to Wholesale Cream Chargers",
+            excerpt: "Everything you need to know about starting your wholesale cream charger business.",
+            image: "../images/imgi_1_cream-deluxe-products-kRCY-eG8.png"
+        },
+        {
+            id: "bulk-ordering-tips",
+            category: "Tips",
+            date: "December 28, 2024",
+            title: "Tips for Bulk Ordering Cream Chargers",
+            excerpt: "Maximize your profits with these smart bulk ordering strategies.",
+            image: "../images/imgi_2_cream-deluxe-black-cobra-RfpR8M7c.png"
+        }
+        ];
+
+        const blogGrid = document.getElementById("blogGrid");
+
+        blogs.forEach(blog => {
+        blogGrid.innerHTML += `
+            <article class="group bg-[#0b0b0b] border border-white/10 rounded-2xl
+                            overflow-hidden transition-all duration-500
+                            hover:-translate-y-2 hover:border-primary">
+
+            <!-- Image -->
+            <div class="relative overflow-hidden">
+                <img src="${blog.image}"
+                    alt="${blog.title}"
+                    class="w-full h-[240px] object-cover
+                            transition-transform duration-700
+                            group-hover:scale-105">
+
+                <!-- Category -->
+                <span class="absolute top-4 left-4 px-3 py-1 text-xs rounded-full
+                            bg-primary text-black font-semibold">
+                ${blog.category}
+                </span>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6">
+                <p class="flex items-center gap-2 text-gray-400 text-xs mb-3">
+                <i class="fa-regular fa-calendar"></i>
+                ${blog.date}
+                </p>
+                ${blog.date}
+                </p>
+
+                <h3 class="text-white font-semibold text-lg mb-3 leading-snug">
+                ${blog.title}
+                </h3>
+
+                <p class="text-gray-400 text-sm mb-6">
+                ${blog.excerpt}
+                </p>
+
+                <a href="blog-single.html?id=${blog.id}"
+                class="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+                Read More <span class="transition-transform group-hover:translate-x-1">→</span>
+                </a>
+            </div>
+
+            </article>
+        `;
+        });
+        </script>
+
+</body>
+</html>

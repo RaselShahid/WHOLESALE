@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PremiumWholesaleDistributor|WholesaleProOfficial</title>
+    <meta name="description" content="OfficialpartnerforCreamDeluxe,ExoticWhip&FastGas.Wholesalebulkordersavailable365daysayear.Fastglobalshipping.OrderonWhatsApp!">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,700;0,800;1,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    container: { center: true, padding: '1.5rem', screens: { '2xl': '1400px' } },
+                    colors: { 
+                        'primary': '#EAB308', 
+                        'dark-bg': '#0D0D0D', 
+                        'dark-card': '#141414',
+                        'whatsapp': '#25d366'
+                    },
+                    backgroundImage: { 
+                        'gold-grad': 'linear-gradient(135deg, #EAB308 0%, #A16207 100%)',
+                        'card-grad': 'linear-gradient(180deg, rgba(20, 20, 20, 1) 0%, rgba(10, 10, 10, 1) 100%)'
+                    },
+                    boxShadow: { 'gold-glow': '0 0 40px rgba(234, 179, 8, 0.25)' },
+                    fontFamily: { 'display': ['"Plus Jakarta Sans"', 'sans-serif'], 'body': ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+
+    <style>
+/* =======================
+   Base
+======================= */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0D0D0D;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+    /* =======================
+      Nav menu
+    ======================= */
+    /* Glassmorphism Effect */
+    .glass-nav {
+        background: rgba(13, 13, 13, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Active Page Indicator */
+    .text-primary.border-b-2 {
+        border-bottom-color: #EAB308;
+    }
+
+    /* WhatsApp Specific Color */
+    .bg-whatsapp {
+        background-color: #25d366;
+    }
+
+
+/* =======================
+   Animations
+======================= */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =======================
+   Glass Nav & Cards
+======================= */
+.glass-nav {
+    background: rgba(13, 13, 13, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-hover {
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+.card-hover:hover {
+    border-color: rgba(234, 179, 8, 0.3);
+    transform: translateY(-5px);
+    background: rgba(20, 20, 20, 1);
+}
+
+/* =======================
+   Gold Glow Animation
+======================= */
+@keyframes goldGlowPulse {
+    0%   { box-shadow: 0 0 5px rgba(234, 179, 8, 0.3); }
+    50%  { box-shadow: 0 0 25px rgba(234, 179, 8, 0.7); }
+    100% { box-shadow: 0 0 5px rgba(234, 179, 8, 0.3); }
+}
+
+/* =======================
+   WhatsApp Button
+======================= */
+.btn-whatsapp-gold-glow {
+    background-color: #25d366;
+    animation: goldGlowPulse 3s infinite ease-in-out;
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+}
+.btn-whatsapp-gold-glow:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+
+/* =======================
+   Sections
+======================= */
+.readyToOrder {
+    background-color: #090909;
+    padding: 5rem 0;
+}
+
+.stat-value-yellow {
+    color: #E48A10;
+    font-size: 1.5rem;
+}
+
+.whyChooseUs{
+    padding: 5rem 0;
+}
+
+/* =======================
+   Footer
+======================= */
+.footerSection {
+    background-color: #0D0D0D;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 5rem 0;
+}
+
+.footer-heading {
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-link {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    transition: color 0.3s;
+}
+.footer-link:hover {
+    color: #EAB308;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+.footer-contact-icon {
+    color: #EAB308;
+    margin-top: 0.25rem;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <header class="fixed top-0 w-full z-50 glass-nav">
+    <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+        <div class="text-xl md:text-2xl font-display font-extrabold italic uppercase tracking-tighter">
+            WHOLESALE <span class="text-primary">PRO</span>
+        </div>
+
+        <nav class="hidden lg:flex items-center gap-8
+            text-[11px] uppercase tracking-[0.2em]
+            font-bold text-gray-400">
+
+            <!-- Home -->
+            <a href="/index.html"
+                class="hover:text-primary transition-colors">
+                Home
+            </a>
+
+            <!-- About -->
+            <a href="/Pages/about.html"
+                class="hover:text-primary transition-colors">
+                About
+            </a>
+
+            <!-- Products -->
+            <a href="/Pages/products.html"
+                class="hover:text-primary transition-colors">
+                Products
+            </a>
+
+            <!-- Services -->
+            <a href="/Pages/services.html"
+                class="hover:text-primary transition-colors">
+                Services
+            </a>
+
+            <!-- Blog -->
+            <a href="/Pages/blog.html"
+                class="hover:text-primary transition-colors">
+                Blog
+            </a>
+
+            <!-- Brands Dropdown -->
+            <div class="relative group cursor-pointer">
+
+                <span class="flex items-center gap-2
+                            group-hover:text-primary transition-colors">
+                Brands
+                <i class="fa-solid fa-chevron-down text-[8px]"></i>
+                </span>
+
+                <!-- Dropdown -->
+                <div class="absolute top-full left-0 mt-4 w-48
+                            bg-[#141414]
+                            border border-white/10
+                            rounded-xl shadow-2xl
+                            opacity-0 invisible
+                            group-hover:opacity-100 group-hover:visible
+                            transition-all duration-300">
+
+                <a href="/Pages/cream delux.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Cream Deluxe
+                </a>
+
+                <a href="/Pages/exotic whip.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Exotic Whip
+                </a>
+
+                <a href="/Pages/fast gas.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Fast Gas
+                </a>
+
+                <a href="/Pages/smart whip.html"
+                    class="block px-6 py-3 text-gray-400
+                            hover:text-primary hover:bg-white/5 transition">
+                    Smart Whip
+                </a>
+
+                </div>
+            </div>
+
+        </nav>
+
+
+        <div class="flex items-center gap-4">
+            <a href="#" class="bg-whatsapp hover:bg-[#22c35e] text-white px-6 py-3 rounded-xl font-display font-extrabold uppercase text-[10px] tracking-widest flex items-center gap-2 transition-all shadow-lg shadow-green-500/10">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                WhatsApp
+            </a>
+            <button class="lg:hidden text-white text-2xl">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <section class="container pt-36 pb-20 min-h-screen flex flex-col lg:flex-row items-center justify-between gap-16">
+        <div class="max-w-3xl reveal active">
+            <div class="inline-flex items-center gap-2 border border-primary/20 bg-primary/5 text-primary text-[10px] px-4 py-2 rounded-full uppercase tracking-[0.2em] mb-8 font-bold">
+                <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                Official Partner Since 2021
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-display font-extrabold uppercase leading-[0.85] italic mb-8">
+                Premium <br>
+                <span class="text-primary">Wholesale</span> <br>
+                Distribution
+            </h1>
+
+            <p class="text-gray-400 text-lg md:text-xl max-w-xl mb-12 leading-relaxed">
+                Your trusted partner for <span class="text-white font-semibold">Cream Deluxe</span>, <span class="text-white font-semibold">Exotic Whip</span>, and <span class="text-white font-semibold">Fast Gas</span>. 
+                Best prices guaranteed with stock available 365 days a year.
+            </p>
+
+            <div class="flex flex-wrap gap-5">
+                <button class="bg-primary text-black px-10 py-5 rounded-xl font-display font-extrabold uppercase text-sm tracking-widest hover:shadow-gold-glow hover:scale-105 transition-all">
+                    Contact on WhatsApp
+                </button>
+                <button class="border border-white/10 text-white px-10 py-5 rounded-xl font-display font-extrabold uppercase text-sm tracking-widest hover:bg-white/5 transition-all flex items-center gap-2">
+                    View Products <span>→</span>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-3 gap-10 mt-20 pt-10 border-t border-white/5">
+                <div><p class="text-4xl font-display font-bold text-primary">4+</p><p class="text-gray-500 text-xs uppercase tracking-tighter mt-1">Premium Brands</p></div>
+                <div><p class="text-4xl font-display font-bold text-primary">365</p><p class="text-gray-500 text-xs uppercase tracking-tighter mt-1">Days Stock</p></div>
+                <div><p class="text-4xl font-display font-bold text-primary">12+</p><p class="text-gray-500 text-xs uppercase tracking-tighter mt-1">Pallet Minimum</p></div>
+            </div>
+        </div>
+
+        <div class="relative w-full max-w-xl lg:max-w-none lg:flex-1 flex justify-center lg:justify-end animate-float">
+            <div class="absolute inset-0 bg-primary/10 blur-[120px] rounded-full"></div>
+            <img src="Images/imgi_2_cream-deluxe-black-cobra-RfpR8M7c.png" alt="Wholesale Products" class="relative z-10 rounded-3xl border border-white/10 shadow-2xl w-full object-cover aspect-square max-w-[500px]">
+        </div>
+    </section>
+
+   <section class="ourBrands bg-[#090909] p-[5rem]">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-display font-extrabold uppercase text-white tracking-tight">
+            OUR <span class="text-primary italic">BRANDS</span>
+        </h2>
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto font-body text-sm md:text-base">
+            Premium wholesale distribution for the world's leading cream charger brands
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        
+        <div class="bg-dark-card border border-white/5 p-6 md:p-8 rounded-[1.5rem] flex items-center gap-6 group hover:border-primary/30 transition-all duration-500 cursor-pointer">
+            <div class="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0 overflow-hidden rounded-2xl bg-black">
+                <img src="Images/imgi_2_cream-deluxe-black-cobra-RfpR8M7c.png" alt="Cream Deluxe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+            </div>
+            <div class="flex-grow">
+                <span class="text-[9px] md:text-[10px] text-primary font-bold uppercase tracking-[0.2em] block mb-2">Official Partner Since 2021</span>
+                <h3 class="text-xl md:text-2xl font-display font-bold text-white uppercase italic leading-none">Cream Deluxe</h3>
+                <p class="text-gray-400 text-xs md:text-sm mt-3 font-body opacity-70">Premium 640g & 2kg cream chargers</p>
+            </div>
+            <div class="text-gray-600 group-hover:text-primary transition-colors px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="bg-dark-card border border-white/5 p-6 md:p-8 rounded-[1.5rem] flex items-center gap-6 group hover:border-primary/30 transition-all duration-500 cursor-pointer">
+            <div class="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0 overflow-hidden rounded-2xl bg-black">
+                <img src="Images/imgi_2_cream-deluxe-black-cobra-RfpR8M7c.png" alt="Exotic Whip" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+            </div>
+            <div class="flex-grow">
+                <span class="text-[9px] md:text-[10px] text-primary font-bold uppercase tracking-[0.2em] block mb-2">Official Partner Since 2021</span>
+                <h3 class="text-xl md:text-2xl font-display font-bold text-white uppercase italic leading-none">Exotic Whip</h3>
+                <p class="text-gray-400 text-xs md:text-sm mt-3 font-body opacity-70">670g & 2kg premium bottles</p>
+            </div>
+            <div class="text-gray-600 group-hover:text-primary transition-colors px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="bg-dark-card border border-white/5 p-6 md:p-8 rounded-[1.5rem] flex items-center gap-6 group hover:border-primary/30 transition-all duration-500 cursor-pointer">
+            <div class="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0 overflow-hidden rounded-2xl bg-black">
+                <img src="Images/imgi_2_cream-deluxe-black-cobra-RfpR8M7c.png" alt="Smart Whip" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+            </div>
+            <div class="flex-grow">
+                <span class="text-[9px] md:text-[10px] text-primary font-bold uppercase tracking-[0.2em] block mb-2">Official Partner Since 2020</span>
+                <h3 class="text-xl md:text-2xl font-display font-bold text-white uppercase italic leading-none">Smart Whip</h3>
+                <p class="text-gray-400 text-xs md:text-sm mt-3 font-body opacity-70">640g cylinders with precision</p>
+            </div>
+            <div class="text-gray-600 group-hover:text-primary transition-colors px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="bg-dark-card border border-white/5 p-6 md:p-8 rounded-[1.5rem] flex items-center gap-6 group hover:border-primary/30 transition-all duration-500 cursor-pointer">
+            <div class="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0 overflow-hidden rounded-2xl bg-black">
+                <img src="Images/imgi_2_cream-deluxe-black-cobra-RfpR8M7c.png" alt="Fast Gas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+            </div>
+            <div class="flex-grow">
+                <span class="text-[9px] md:text-[10px] text-primary font-bold uppercase tracking-[0.2em] block mb-2">Official Partner Since 2020</span>
+                <h3 class="text-xl md:text-2xl font-display font-bold text-white uppercase italic leading-none">Fast Gas</h3>
+                <p class="text-gray-400 text-xs md:text-sm mt-3 font-body opacity-70">640g & 2kg tanks available</p>
+            </div>
+            <div class="text-gray-600 group-hover:text-primary transition-colors px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="whyChooseUs">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-extrabold uppercase text-white tracking-tight">
+                WHY <span class="text-primary">CHOOSE US</span>
+            </h2>
+            <p class="text-gray-500 mt-4 font-body max-w-2xl mx-auto text-sm md:text-base">
+                Your trusted wholesale partner with unbeatable prices and reliable stock
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            
+            <div class="bg-dark-card p-10 rounded-[2rem] border border-white/5 group hover:border-primary/20 transition-all duration-500">
+                <div class="text-primary text-2xl mb-8 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-box"></i> </div>
+                <h4 class="text-xl font-display font-bold text-white uppercase mb-4 italic">Bulk Orders</h4>
+                <p class="text-gray-500 text-sm leading-relaxed font-body">
+                    Starting from 5-12 pallets depending on location
+                </p>
+            </div>
+
+            <div class="bg-dark-card p-10 rounded-[2rem] border border-white/5 group hover:border-primary/20 transition-all duration-500">
+                <div class="text-primary text-2xl mb-8 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-truck"></i> </div>
+                <h4 class="text-xl font-display font-bold text-white uppercase mb-4 italic">Container Shipping</h4>
+                <p class="text-gray-500 text-sm leading-relaxed font-body">
+                    Minimum 1 container from 12 pallets
+                </p>
+            </div>
+
+            <div class="bg-dark-card p-10 rounded-[2rem] border border-white/5 group hover:border-primary/20 transition-all duration-500">
+                <div class="text-primary text-2xl mb-8 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-clock"></i> </div>
+                <h4 class="text-xl font-display font-bold text-white uppercase mb-4 italic">365 Days Stock</h4>
+                <p class="text-gray-500 text-sm leading-relaxed font-body">
+                    Year-round availability guaranteed
+                </p>
+            </div>
+
+            <div class="bg-dark-card p-10 rounded-[2rem] border border-white/5 group hover:border-primary/20 transition-all duration-500">
+                <div class="text-primary text-2xl mb-8 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-shield-alt"></i> </div>
+                <h4 class="text-xl font-display font-bold text-white uppercase mb-4 italic">Official Partner</h4>
+                <p class="text-gray-500 text-sm leading-relaxed font-body">
+                    Authorized distributor since 2020
+                </p>
+            </div>
+
+            <div class="bg-dark-card p-10 rounded-[2rem] border border-white/5 group hover:border-primary/20 transition-all duration-500">
+                <div class="text-primary text-2xl mb-8 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-globe"></i> </div>
+                <h4 class="text-xl font-display font-bold text-white uppercase mb-4 italic">Global Reach</h4>
+                <p class="text-gray-500 text-sm leading-relaxed font-body">
+                    Stock available in multiple countries
+                </p>
+            </div>
+
+            <div class="bg-dark-card p-10 rounded-[2rem] border border-white/5 group hover:border-primary/20 transition-all duration-500">
+                <div class="text-primary text-2xl mb-8 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-bolt"></i> </div>
+                <h4 class="text-xl font-display font-bold text-white uppercase mb-4 italic">Best Prices</h4>
+                <p class="text-gray-500 text-sm leading-relaxed font-body">
+                    Large-scale purchasing power
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+   <section class="readyToOrder">
+    <div class="container mx-auto px-6 text-center">
+        
+        <h2 class="text-5xl md:text-7xl font-display font-extrabold text-white uppercase italic mb-6">
+            READY TO <span class="text-primary">ORDER?</span>
+        </h2>
+        
+        <p class="text-gray-400 max-w-2xl mx-auto mb-12 font-body leading-relaxed">
+            Contact us on WhatsApp for the best wholesale deals. Fast response, competitive prices, reliable stock.
+        </p>
+
+        <div class="flex justify-center mb-20">
+            <a href="https://wa.me/yournumber" class="btn-whatsapp-gold-glow">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                Get Best Deals on WhatsApp
+            </a>
+        </div>
+
+        <div class="w-full max-w-4xl mx-auto h-[1px] bg-white/10 my-12"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+            <div class="flex flex-col items-center">
+                <span class="stat-value-yellow">24/7</span>
+                <span class="text-gray-500 text-[11px] uppercase tracking-[0.2em] mt-2">Response</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="stat-value-yellow">5+</span>
+                <span class="text-gray-500 text-[11px] uppercase tracking-[0.2em] mt-2">Pallets Min</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="stat-value-yellow">EU+</span>
+                <span class="text-gray-500 text-[11px] uppercase tracking-[0.2em] mt-2">Coverage</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+   <footer class="footerSection">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            
+            <div>
+                <div class="text-2xl font-display font-extrabold italic uppercase mb-6">
+                    WHOLESALE <span class="text-primary">PRO</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-xs">
+                    Your trusted wholesale partner for premium cream chargers. Stock available 365 days a year.
+                </p>
+                <a href="#" class="text-primary font-bold text-sm flex items-center gap-2 hover:underline">
+                    <i class="fa-brands fa-whatsapp"></i> Contact on WhatsApp
+                </a>
+            </div>
+
+            <div class="footer-list">
+                <h5 class="footer-heading">Quick Links</h5>
+                <a href="#" class="footer-link">Home</a>
+                <a href="#" class="footer-link">About Us</a>
+                <a href="#" class="footer-link">Products</a>
+                <a href="#" class="footer-link">Services</a>
+                <a href="#" class="footer-link">Blog</a>
+            </div>
+
+            <div class="footer-list">
+                <h5 class="footer-heading">Our Brands</h5>
+                <a href="#" class="footer-link">Cream Deluxe</a>
+                <a href="#" class="footer-link">Fast Gas</a>
+                <a href="#" class="footer-link">Exotic Whip</a>
+                <a href="#" class="footer-link">Smart Whip</a>
+            </div>
+
+
+            <div>
+                <h5 class="footer-heading">Contact</h5>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+                    Global Wholesale Distribution
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope footer-contact-icon"></i>
+                    info@wholesalepro.com
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
+                    Available 24/7 on WhatsApp
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pt-8 border-t border-white/5 text-center">
+            <p class="text-gray-600 text-xs uppercase tracking-widest">
+                © 2026 WholesalePro. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
